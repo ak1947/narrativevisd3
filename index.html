@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="arrestdraw.js"></script>
+    
+    <title>Arrests in City of Los Angeles</title>
+</head>
+<body>
+
+<div class="container" >
+
+        <div class="tooltip"></div>
+        <h1>Arrests in City of Los Angeles 2010 ~ 2019</h1>
+        <p>
+            The charts present some basic statistical data on the arrest incidents 
+            that occurred in the City of Los Angeles from 2010 to 2019, mostly about 
+            yearly frequency and descent. Clicking 
+            on the arrows to navigate through the scenes. The last scene contains clickable
+            bars to filter the arrests by descent interactively.
+        </p>
+        
+        <!-- charts  -->
+        <table style="width:100%; min-width: 800;">
+            <!-- chart titles -->
+            <tr>
+                <td  class="sbsm"></td>
+                <td class="ch1tdc">
+                    <h3 id="ch1header"></h3>
+                </td>
+                
+                <td class="tdHSpacer"></td>
+                <td class="tdhalfW">
+                    <h3 id="ch2header"></h3>
+                </td>
+                <td  class="sbsm"></td>
+            </tr>
+            
+            <!-- charts -->
+            <tr class="trchart">
+                <td id="leftsb" class="sideBar" onclick="preScene()">‹</td>
+                <!-- left chart -->
+                <td class="ch1tdc" id="chart1TD">
+                    <svg id="Hours" class="Hours"> </svg>
+                </td>
+                <td class="tdHSpacer"></td>
+                <!-- right chart -->
+                <td class="tdhalfW">
+                    <div style="height:700;">
+                        <svg id="Category" class="Category"> </svg>
+                    </div>
+                </td>
+                <td id="rightsb" class="sideBar" onclick="nextScene()">›</td>
+            </tr>
+        </table>
+        
+        <!-- progress bar -->
+        <table style="width:100%;min-width: 800;">
+            <tr>
+                <td style="width:100%">
+                    <svg id="prog" class="prog">  </svg>
+                </td>
+            </tr>
+        </table>
+        
+        
+        <div style="margin-top: 50px;">
+            <a href="about.html">Decription</a>
+        </div>
+
+    <script>scene00()</script>
+</div>
+
+</body>
+
+</html>

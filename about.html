@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <title>Narrative Visualization Description</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Narrative Visualization Description</h1>
+        
+
+        <h3>Introduction</h3>
+        <p>
+            The dataset for the narrative visualizations was downloaded from 
+            <a href="https://data.lacity.org/A-Safe-City/Arrest-Data-from-2010-to-2019/yru6-6re4">
+            data.lacity.org</a>. The origninal dataset contains various information of the Arrest incidents in the 
+            City of Los Angeles from 2010 to 2019, 
+            including 25 columns and 1.32 million rows.
+            It was preprocessed by some Python script to extract the inteseted 
+            information for visualisation such as the arrest type and descent.
+            The entire visualization is produced using D3 javascript libraries.
+        </p>
+
+        <h3>Visualization Structure</h3>
+        <p> The <b>martini glass</b> hybrid structure was used to to guide the audience through 
+            several pre-defined scenes. Users follow the authors introduction and observations 
+            regarding the story, and then they go to a more open area allowing more independent 
+            exploration. The various scenes were presented with some useful tips and
+             annotation to help users analyze the data further.
+        </p>
+        <h3>Scenes</h3>
+        <p>
+            There are six scenes in the visualization. 
+            The first five scenes mostly present predefined visualization works to 
+            introduce observations on some specific indices of the statistical 
+            information of arrest data. However, users could select a particular category
+            of arrest or year to see specific details on it dynamically.
+        </p>
+        <h3>Annotations</h3>
+        <p>
+            The visualization contains a series of annotations. For example, the extreme
+             values on the curves and histograms are annotated to highlight the arrests that
+             should be paid attention to.
+            Some essential observations on the arrests with respect to months are annotated
+            to guide users to understand the trends of some particular arrests.
+            There are also instant tooltips poping up on demand for the points 
+            when mouse hovers over them.
+            
+        </p>
+        <h3>Parameters</h3>
+        <p>
+            Parameters allow users to interact with the visualization. There are generally three 
+            three parameters. 
+            <b>First</b>, the first five scenes contain two arrows to move the scenes backwards and forwards, respectively. 
+            <br/>
+            <b>Second</b>, the sixth scene contains parameters to change the arrest type and month dynamically
+            to select interested data.
+            <br/>
+            <b>Lastly</b>, the instant tooltips are showing on demand at all times.
+        </p>
+        <h3>Triggers</h3>
+        <p>
+            The scene number, navigation buttons, and mouse hovering are triggers that change the narrative visualization
+            according to user actions.
+            Specifically, the progress bar will change dynamically as the user 
+            navigates through different scenes. And the bar color will change when 
+            mouse hovers over or clicks on it.
+            
+        </p>
+       
+        <h3>Design</h3>
+        <p>
+            The visualization adopts a concise style, and tries to make the contents 
+            informative and thoughtful. 
+            For instance, there is no legends as the chart is self-explanatory 
+            and details are shown on demand on the tooltip. And the height of bars uses a relative
+            value that is not the actual value of arrest numbers.
+            For some descents, the number of arrests is too small to show. Thus, a minimum value of 
+            10 was added to the width of bar.
+            It is recommended to view the web page on a computer 
+            rather than a mobile device.
+        </p>
+        
+        <a href="index.html">Visualization</a>
+    </div>
+    
+</body>
+</html>
